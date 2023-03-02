@@ -1,0 +1,347 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glide__arrow {
+    position: absolute;
+    display: block;
+    top: 50%;
+    z-index: 2;
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.clip__pathNext {
+    clip-path: circle(35% at 100% 47%);
+}
+
+.clip__pathPrev {
+    clip-path: circle(35.0% at 0 51%);
+}
+
+.clip__pathAdmin {
+    clip-path: circle(50% at 50% 100%);
+}
+
+.liner__gradient {
+    background: linear-gradient(#d70018 0%, #ff8a97);
+}
+
+/* hover */
+.bg__hover {
+    transition: all 1s;
+    transform: translate(0px, -250px);
+    opacity: 0;
+}
+
+
+.img__hover:hover .bg__hover {
+    opacity: 0.2;
+    transform: translate(0px);
+}
+
+.bg__hover2 {
+    transition: all 1s;
+    transform: translate(0px, -250px);
+    opacity: 0;
+}
+
+
+.img__hover2:hover .bg__hover2 {
+    opacity: 0.2;
+    transform: translate(0px, -5px);
+}
+
+/* input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* strollBar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 5px;
+}
+
+.list {
+    width: 640px;
+    max-width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+/* swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+    margin-top: 20px;
+    padding: 5px;
+    width: 25%;
+    height: 100%;
+    opacity: 1;
+    border: 2px solid transparent;
+
+}
+
+.mySwiper .swiper-slide-thumb-active {
+
+    border-color: #d70018;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    padding: 25px 15px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+:root {
+    --swiper-navigation-size: 25px !important;
+}
+
+/* Pangination */
+
+.item__page>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item__page>ul>li {
+    padding: 5px 10px;
+    color: #000;
+}
+
+.item__page>ul>li.selected {
+    padding: 5px 10px;
+    border-radius: 10%;
+    background-color: #4caf50;
+    color: #fff
+}
+
+.item__page>ul>li:hover:not(.selected) {
+    padding: 5px 10px;
+    background-color: #ddd;
+}
+
+/* type range multi */
+.multi-range-slider .thumb::before {
+    border: 0px !important;
+    box-shadow: 0px 0px 2px black, inset 0px 0px 1px grey !important;
+}
+
+.multi-range-slider .bar-left {
+    box-shadow: inset 0px 0px 1px black !important;
+}
+
+.multi-range-slider .bar-right {
+    box-shadow: inset 0px 0px 1px black !important;
+}
+
+.multi-range-slider .bar-inner {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* input focus */
+:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.effect-16 {
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+}
+
+.effect-16~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #575d59;
+    transition: 0.4s;
+}
+
+.effect-16:focus~.focus-border,
+.has-content.effect-16~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+}
+
+.effect-16~label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    color: #aaa;
+    transition: 0.3s;
+    z-index: -1;
+    letter-spacing: 0.5px;
+}
+
+.effect-16:focus~label,
+.has-content.effect-16~label {
+    top: -10px;
+    font-size: 12px;
+    color: #3399FF;
+    transition: 0.3s;
+}
+
+/* select  */
+select {
+    padding: 0.6em;
+    width: 100%;
+    border-radius: .2em;
+    border: 1px solid #acacac;
+    color: #181820;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+
+    background: url('https://cdn1.iconfinder.com/data/icons/arrows-vol-1-4/24/dropdown_arrow-512.png');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right;
+    background-origin: content-box;
+}
+
+/* orderTrack hover */
+
+.order-tracking::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: calc(100% - 445px);
+
+    top: 18px;
+    position: absolute;
+    left: 55px;
+    z-index: 0;
+}
+
+.order-tracking[data-bg="#f7be16"]::before {
+    background-color: #f7be16;
+}
+
+.order-tracking[data-bg="green"]::before {
+    background-color: green;
+}
+
+
+.order-trackingTwo::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: calc(100% - 445px);
+
+    top: 18px;
+    position: absolute;
+    left: 51.5%;
+    z-index: 0;
+}
+
+.order-trackingTwo[data-bg="#f7be16"]::before {
+    background-color: #f7be16;
+}
+
+.order-trackingTwo[data-bg="green"]::before {
+    background-color: green;
+}
